@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".firstopen.Login">
+
+    <TextView
+        android:layout_marginTop="12dp"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="#382BEE"
+        android:text="Laundry"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/login_bg"
+        android:background="@drawable/ic_login_bg"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_width="210dp"
+        android:layout_height="480dp" />
+    <RelativeLayout
+        android:paddingRight="24dp"
+        android:paddingLeft="36dp"
+        android:gravity="center"
+        android:layout_marginBottom="-70dp"
+        android:layout_above="@id/login_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <Button
+            android:id="@+id/login_btn_register"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:layout_alignParentRight="true"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/register_btn_login"
+            android:text="REGISTER"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#382BEE"
+            android:text="LOGIN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/log_card"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="48dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="1dp">
+        <LinearLayout
+            android:layout_margin="12dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/login_et_email"
+                    android:hint="Email"
+                    android:drawableStart="@drawable/ic_mail"
+                    android:drawablePadding="6dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/login_et_password"
+                    android:drawableStart="@drawable/ic_lock"
+                    android:drawablePadding="6dp"
+                    android:layout_marginBottom="24dp"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <include
+        android:id="@+id/login_btn_login"
+        layout="@layout/util_login_register"
+        android:layout_below="@id/log_card"
+        android:layout_marginTop="-16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
